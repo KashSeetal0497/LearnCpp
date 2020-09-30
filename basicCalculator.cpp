@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
 using namespace std;
 
 namespace calculator {
@@ -16,10 +15,12 @@ namespace calculator {
 
 		int multiplication(int a, const int b) {
 			int result = 0;
-			for (int i = 0; i < (double)b/2; i++) {
+			for (int i = 0; i < (int)b/2; i++) {
 				result += addition(a, a);
 			}
-
+			if (b % 2 != 0) {
+				result = addition(result, a);
+			}
 			return result;
 		}
 
@@ -72,6 +73,5 @@ using namespace calculator;
 int main() {
 	Calculator c = Calculator(0,0);
 	c.demo();
-	
 	return 0;
 }
