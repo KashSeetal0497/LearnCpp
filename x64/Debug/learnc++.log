@@ -1,0 +1,4 @@
+﻿  basicCalculator.cpp
+d:\desktop\code\learnc++\learnc++\basiccalculator.cpp(25): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+d:\desktop\code\learnc++\learnc++\basiccalculator.cpp(73): warning C4091: '': ignored on left of 'calculator::Calculator' when no variable is declared
+LINK : fatal error LNK1561: entry point must be defined
