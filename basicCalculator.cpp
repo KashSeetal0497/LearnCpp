@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 namespace calculator {
@@ -34,6 +36,7 @@ namespace calculator {
 	public:
 		int a;
 		int b;
+		string line="";
 
 		Calculator(int a, int b) {
 			a = a;
@@ -42,7 +45,7 @@ namespace calculator {
 
 
 		void demo() {
-			while (cin.get() != 'q') {
+			do {
 				cout << "Enter a" << endl;
 				cin >> a;
 				cout << "Enter b" << endl;
@@ -59,11 +62,12 @@ namespace calculator {
 
 				cout << "Division: " << division(x, y) << endl;
 
-				cout << "q to exit, anything else to continue " << endl;
-				cout << endl;
-				cin.get();
+				cout << "q to exit, anything else to continue "<<endl;
+				
+				cin>>line;
 
 			}
+			while (line != "q");
 		}
 	};
 };
